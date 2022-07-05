@@ -27,8 +27,11 @@
             </intent-filter>
         </activity>
 
-        <activity
-            android:name=".PermissionActivity"/>
+        <activity android:name=".LoginActivity"/>
+
+        <activity android:name=".PermissionActivity"/>
+
+        <activity android:name=".LifecycleActivity"/>
     </application>
 
 </manifest>

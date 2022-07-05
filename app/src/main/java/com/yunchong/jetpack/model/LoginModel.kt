@@ -1,11 +1,14 @@
 package com.yunchong.jetpack.model
 
 import android.content.Context
+import android.graphics.Color
 import android.util.Log
+import android.view.Gravity
 import android.widget.Toast
 import androidx.databinding.ObservableField
-import com.yunchong.jetpack.PermissionActivity
-import com.yunchong.jetpack.utils.startActivity
+import com.yunchong.alltoast.AllToast
+import com.yunchong.jetpack.R
+
 
 /**
  * 登录Model
@@ -35,13 +38,21 @@ class LoginModel(context: Context, accountName : String, password : String) {
      */
     fun login() {
         if ("zhangsan" == accountNameField.get() && "123456" == passwordField.get()) {
-            Toast.makeText(context, "登录成功...", Toast.LENGTH_SHORT).show()
-            startActivity<PermissionActivity>(context) {
-                putExtra("acountName", accountNameField.get())
-                putExtra("password", passwordField.get())
-            }
+            AllToast.with(context)
+                .text("登录成功...")
+                .gravity(Gravity.CENTER, 0, 0)
+                .textSize(20F) //文本大小，单位是sp
+                .radius(5F)//单位为dp
+                .duration(Toast.LENGTH_LONG) //时长
+                .show()
         } else {
-            Toast.makeText(context, "登录失败...", Toast.LENGTH_SHORT).show()
+            AllToast.with(context)
+                .text("登录失败...")
+                .gravity(Gravity.CENTER, 0, 0)
+                .textSize(20F) //文本大小，单位是sp
+                .radius(5F)//单位为dp
+                .duration(Toast.LENGTH_LONG) //时长
+                .show()
         }
     }
 }
