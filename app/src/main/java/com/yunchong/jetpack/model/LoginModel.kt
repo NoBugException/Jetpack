@@ -4,7 +4,7 @@ import android.content.Context
 import android.util.Log
 import android.widget.Toast
 import androidx.databinding.ObservableField
-import com.yunchong.jetpack.DataActivity
+import com.yunchong.jetpack.PermissionActivity
 import com.yunchong.jetpack.utils.startActivity
 
 /**
@@ -36,7 +36,7 @@ class LoginModel(context: Context, accountName : String, password : String) {
     fun login() {
         if ("zhangsan" == accountNameField.get() && "123456" == passwordField.get()) {
             Toast.makeText(context, "登录成功...", Toast.LENGTH_SHORT).show()
-            startActivity<DataActivity>(context) {
+            startActivity<PermissionActivity>(context) {
                 putExtra("acountName", accountNameField.get())
                 putExtra("password", passwordField.get())
             }
