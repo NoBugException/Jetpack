@@ -23,6 +23,7 @@ class UserModel(application: Application) : AndroidViewModel(application) {
             userName = "张三"
             age = (1..100).random()
         }
-        userLiveData.value = user
+        userLiveData.value = user // 或改成 userLiveData.postValue(user)
+
     }
 }

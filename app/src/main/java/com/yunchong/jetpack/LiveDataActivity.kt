@@ -2,10 +2,14 @@ package com.yunchong.jetpack
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.*
+import com.yunchong.jetpack.bean.User
 import com.yunchong.jetpack.databinding.ActivityLivedataBinding
+import com.yunchong.jetpack.model.UserLiveData
 import com.yunchong.jetpack.model.UserModel
 import com.yunchong.jetpack.model.UserModelByMediator
 
@@ -51,6 +55,7 @@ class LiveDataActivity : AppCompatActivity() {
 //            binding.userinfo.text = "大家好，我今年 $it 岁了！"
 //        })
 
+        // MediatorLiveData 统一管理多个LiveData
         val userModelByMediator = ViewModelProvider(this@LiveDataActivity).get(UserModelByMediator::class.java)
         userModelByMediator.mediatorLiveData.observe(this@LiveDataActivity) {
             when(it.userName) {
@@ -59,10 +64,18 @@ class LiveDataActivity : AppCompatActivity() {
             }
         }
 
+        // LiveData单例实现方式
+        UserLiveData.get().observe(this@LiveDataActivity) {
+            binding.userinfo1.text = "大家好，我叫" + it.userName + "，今年" + it.age + "岁了！"
+        }
+
         binding.activityDataButton.setOnClickListener {
 //             userModel.updateUserInfo()
-            userModelByMediator.updateUserInfo1()
-            userModelByMediator.updateUserInfo2()
+//            userModelByMediator.updateUserInfo1()
+//            userModelByMediator.updateUserInfo2()
+
+            UserLiveData.get().updateUserInfo()
+
         }
     }
 

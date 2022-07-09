@@ -33,7 +33,7 @@ class UserModelByMediator(application: Application) : AndroidViewModel(applicati
             userName = "张三"
             age = (1..100).random()
         }
-        userLiveData1.value = user
+        userLiveData1.value = user // 或改成 userLiveData1.postValue(user)
     }
 
     /**
@@ -44,6 +44,6 @@ class UserModelByMediator(application: Application) : AndroidViewModel(applicati
             userName = "李四"
             age = (1..100).random()
         }
-        userLiveData2.value = user
+        userLiveData2.value = user // 或改成 userLiveData2.postValue(user)
     }
 }
