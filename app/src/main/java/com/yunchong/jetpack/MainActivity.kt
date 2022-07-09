@@ -25,5 +25,8 @@ class MainActivity : AppCompatActivity() {
         binding.liveDataButton.setOnClickListener {
             startActivity(Intent(this@MainActivity, LiveDataActivity::class.java))
         }
+        binding.liveeventbusButton.setOnClickListener {
+            startActivity(Intent(this@MainActivity, LiveEventBusActivity::class.java))
+        }
     }
 }
