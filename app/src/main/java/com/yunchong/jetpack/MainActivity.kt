@@ -22,5 +22,8 @@ class MainActivity : AppCompatActivity() {
         binding.lifecycleButton.setOnClickListener {
             startActivity(Intent(this@MainActivity, LifecycleActivity::class.java))
         }
+        binding.liveDataButton.setOnClickListener {
+            startActivity(Intent(this@MainActivity, LiveDataActivity::class.java))
+        }
     }
 }

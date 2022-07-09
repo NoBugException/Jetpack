@@ -32,6 +32,8 @@
         <activity android:name=".PermissionActivity"/>
 
         <activity android:name=".LifecycleActivity"/>
+
+        <activity android:name=".LiveDataActivity"/>
     </application>
 
 </manifest>
