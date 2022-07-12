@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'org.jetbrains.kotlin.android.extensions'
+    id 'androidx.navigation.safeargs.kotlin'
 }
 
 android {
@@ -51,4 +52,8 @@ dependencies {
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.1.1"
     implementation 'com.guolindev.permissionx:permissionx:1.6.4'
     implementation 'io.github.jeremyliao:live-event-bus-x:1.8.0'
+
+    //Navigation
+    implementation "androidx.navigation:navigation-fragment-ktx:2.3.5"
+    implementation "androidx.navigation:navigation-ui-ktx:2.3.5"
 }

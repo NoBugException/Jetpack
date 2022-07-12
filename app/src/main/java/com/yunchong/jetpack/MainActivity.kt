@@ -28,5 +28,8 @@ class MainActivity : AppCompatActivity() {
         binding.liveeventbusButton.setOnClickListener {
             startActivity(Intent(this@MainActivity, LiveEventBusActivity::class.java))
         }
+        binding.navigationButton.setOnClickListener {
+            startActivity(Intent(this@MainActivity, NavigationActivity::class.java))
+        }
     }
 }

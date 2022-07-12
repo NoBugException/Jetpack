@@ -36,6 +36,9 @@
         <activity android:name=".LiveDataActivity"/>
 
         <activity android:name=".LiveEventBusActivity"/>
+
+        <activity android:name=".NavigationActivity"/>
+
     </application>
 
 </manifest>
