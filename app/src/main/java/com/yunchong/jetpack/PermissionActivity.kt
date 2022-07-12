@@ -2,20 +2,19 @@ package com.yunchong.jetpack
 
 import android.Manifest
 import android.os.Bundle
-import android.view.Gravity
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.permissionx.guolindev.PermissionX
-import com.yunchong.jetpack.databinding.ActivityPermissionBinding
+import com.yunchong.jetpack.databinding.ActivityPermissionxBinding
 
 class PermissionActivity : AppCompatActivity() {
 
-    private lateinit var binding : ActivityPermissionBinding
+    private lateinit var binding : ActivityPermissionxBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView<ActivityPermissionBinding>(this@PermissionActivity, R.layout.activity_permissionx)
+        binding = DataBindingUtil.setContentView<ActivityPermissionxBinding>(this@PermissionActivity, R.layout.activity_permissionx)
 
         binding.activityDataButton.setOnClickListener {
             // 获取权限

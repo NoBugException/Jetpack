@@ -1,11 +1,11 @@
 package com.yunchong.jetpack.model
 
 import android.app.Application
-import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
 import com.yunchong.jetpack.bean.User
 
-class UserModel(application: Application) : AndroidViewModel(application) {
+class UserModel(application: Application) : ViewModel() {
 
     val userLiveData = MutableLiveData<User>() // 创建 LiveData 对象
     private var mApplication: Application? = null
