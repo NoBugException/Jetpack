@@ -65,6 +65,46 @@ fun main() {
     // val str: String = coroutineScope.async { "" }.await()：加入await之后就变成阻塞方法，有返回值
     // 如果有返回值，我们常用 withContext 代替：
     // val str: String = withContext(coroutineScope.coroutineContext) { "" }
+    // 12、结合 ViewModel 使用
+    // 如果某个类继承ViewModel或AndroidViewModel，那么自带viewModelScope
+    // 直接使用：
+    //         viewModelScope.launch(Dispatchers.IO) {
+    //          }
+    // viewModelScope 在 ViewModel 的作用域内执行，
+    // 如果 ViewModel 因用户离开屏幕而被销毁，则 viewModelScope 会自动取消，且所有运行的协程也会被取消
+    // 13、网络请求的协程用法
+    // class LoginViewModel(
+    //    private val loginRepository: LoginRepository
+    // ): ViewModel() {
+    //
+    //    fun login(username: String, token: String) {
+    //        viewModelScope.launch {
+    //            val jsonBody = "{ username: \"$username\", token: \"$token\"}"
+    //            val result = loginRepository.makeLoginRequest(jsonBody)
+    //            when (result) {
+    //                is Result.Success<LoginResponse> -> // Happy path
+    //                else -> // Show error in UI
+    //            }
+    //        }
+    //    }
+    // }
+    //     class LoginRepository(...) {
+    //        ...
+    //        suspend fun makeLoginRequest(
+    //            jsonBody: String
+    //        ): Result<LoginResponse> {
+    //
+    //            // Move the execution of the coroutine to the I/O dispatcher
+    //            return withContext(Dispatchers.IO) {
+    //                // Blocking network request code
+    //            }
+    //        }
+    //    }
+    // 协程可以确保网络请求避免阻塞主线程， makeLoginRequest 方法使用 suspend 修饰，suspend 将当前协程挂起，
+    // 等待 makeLoginRequest 执行完成则回复当前协程，并返回指定类型的返回值。类似于阻塞线程，但协程可以不阻塞主线。
 }
+
+
+
 
 
