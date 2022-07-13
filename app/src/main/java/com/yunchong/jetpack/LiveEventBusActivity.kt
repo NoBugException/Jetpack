@@ -69,7 +69,11 @@ import kotlinx.android.parcel.Parcelize
 //            .enableLogger(false) // 日志开关，默认是true
 //            .lifecycleObserverAlwaysActive(true) // 配置LifecycleObserver（如Activity）接收消息的模式（默认值true）
 //            .autoClear(false) // 是否自动清除LiveEvent以释放内存，默认false
-
+// 【7】混淆
+// -dontwarn com.jeremyliao.liveeventbus.**
+// -keep class com.jeremyliao.liveeventbus.** { *; }
+// -keep class androidx.lifecycle.** { *; }
+// -keep class androidx.arch.core.** { *; }
 
 class LiveEventBusActivity : AppCompatActivity() {
 
