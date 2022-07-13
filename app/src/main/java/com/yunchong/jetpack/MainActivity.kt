@@ -1,8 +1,8 @@
 package com.yunchong.jetpack
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.yunchong.jetpack.databinding.ActivityMainBinding
 
@@ -30,6 +30,9 @@ class MainActivity : AppCompatActivity() {
         }
         binding.navigationButton.setOnClickListener {
             startActivity(Intent(this@MainActivity, NavigationActivity::class.java))
+        }
+        binding.fastspButton.setOnClickListener {
+            startActivity(Intent(this@MainActivity, FastSharedPreferencesActivity::class.java))
         }
     }
 }

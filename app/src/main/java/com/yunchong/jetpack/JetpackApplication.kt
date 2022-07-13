@@ -2,6 +2,7 @@ package com.yunchong.jetpack
 
 import android.app.Application
 import com.jeremyliao.liveeventbus.LiveEventBus
+import com.yunchong.fastsharedpreferences.FastSharedPreferences
 
 class JetpackApplication : Application() {
 
@@ -18,6 +19,8 @@ class JetpackApplication : Application() {
             .enableLogger(false) // 日志开关，默认是true
             .lifecycleObserverAlwaysActive(true) // 配置LifecycleObserver（如Activity）接收消息的模式（默认值true）
             .autoClear(false) // 是否自动清除LiveEvent以释放内存，默认false
+
+        FastSharedPreferences.init(this)
     }
 
     companion object {
