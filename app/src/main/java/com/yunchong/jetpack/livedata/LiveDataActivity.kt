@@ -1,13 +1,13 @@
 package com.yunchong.jetpack.livedata
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.*
 import com.yunchong.jetpack.R
+import com.yunchong.jetpack.ScopedActivity
 import com.yunchong.jetpack.databinding.ActivityLivedataBinding
 
-class LiveDataActivity : AppCompatActivity() {
+class LiveDataActivity : ScopedActivity() {
 
     private lateinit var binding : ActivityLivedataBinding
 

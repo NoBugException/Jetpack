@@ -2,10 +2,10 @@ package com.yunchong.jetpack.liveeventbus
 
 import android.os.Bundle
 import android.os.Parcelable
-import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.jeremyliao.liveeventbus.LiveEventBus
 import com.yunchong.jetpack.R
+import com.yunchong.jetpack.ScopedActivity
 import com.yunchong.jetpack.databinding.ActivityLiveeventbusBinding
 import kotlinx.android.parcel.Parcelize
 
@@ -76,7 +76,7 @@ import kotlinx.android.parcel.Parcelize
 // -keep class androidx.lifecycle.** { *; }
 // -keep class androidx.arch.core.** { *; }
 
-class LiveEventBusActivity : AppCompatActivity() {
+class LiveEventBusActivity : ScopedActivity() {
 
     private lateinit var binding : ActivityLiveeventbusBinding
 

@@ -2,13 +2,13 @@ package com.yunchong.jetpack.lifecycle
 
 import android.os.Bundle
 import android.util.Log
-import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.*
 import com.yunchong.jetpack.R
+import com.yunchong.jetpack.ScopedActivity
 import com.yunchong.jetpack.databinding.ActivityLifecycleBinding
 
-class LifecycleActivity : AppCompatActivity() {
+class LifecycleActivity : ScopedActivity() {
 
     private lateinit var binding : ActivityLifecycleBinding
 

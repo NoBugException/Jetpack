@@ -2,10 +2,10 @@ package com.yunchong.jetpack.fastsp
 
 import android.os.Bundle
 import android.util.Log
-import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.yunchong.fastsharedpreferences.FastSharedPreferences
 import com.yunchong.jetpack.R
+import com.yunchong.jetpack.ScopedActivity
 import com.yunchong.jetpack.databinding.ActivityPreloaderBinding
 
 // Github地址：https://github.com/JeremyLiao/FastSharedPreferences
@@ -39,7 +39,7 @@ import com.yunchong.jetpack.databinding.ActivityPreloaderBinding
 //
 
 
-class FastSharedPreferencesActivity : AppCompatActivity() {
+class FastSharedPreferencesActivity : ScopedActivity() {
 
     private lateinit var binding : ActivityPreloaderBinding
 
