@@ -1,15 +1,11 @@
-package com.yunchong.jetpack
+package com.yunchong.jetpack.livedata
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.*
-import com.yunchong.jetpack.bean.User
+import com.yunchong.jetpack.R
 import com.yunchong.jetpack.databinding.ActivityLivedataBinding
-import com.yunchong.jetpack.model.UserLiveData
-import com.yunchong.jetpack.model.UserModel
-import com.yunchong.jetpack.model.UserModelByMediator
-import com.yunchong.jetpack.model.UserModelFactory
 
 class LiveDataActivity : AppCompatActivity() {
 
@@ -17,9 +13,12 @@ class LiveDataActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView<ActivityLivedataBinding>(this@LiveDataActivity, R.layout.activity_livedata)
+        binding = DataBindingUtil.setContentView<ActivityLivedataBinding>(this@LiveDataActivity,
+            R.layout.activity_livedata
+        )
 //        val userModel = ViewModelProvider(this@LiveDataActivity).get(UserModel::class.java)
-        val userModel = ViewModelProvider(this@LiveDataActivity, UserModelFactory(application)).get(UserModel::class.java)
+        val userModel = ViewModelProvider(this@LiveDataActivity, UserModelFactory(application)).get(
+            UserModel::class.java)
         // 使用 observe 会让观察者随着生命周期的活跃而活跃，当生命周期处于活跃状态时LiveData才会更新数据，反之不会更新数据
         // 不需要主动调用 removeObserver(Observer) 移除观察者
         userModel.userLiveData.observe(this@LiveDataActivity, Observer<User> {

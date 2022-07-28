@@ -1,10 +1,9 @@
-package com.yunchong.jetpack.model
+package com.yunchong.jetpack.livedata
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MediatorLiveData
 import androidx.lifecycle.MutableLiveData
-import com.yunchong.jetpack.bean.User
 
 class UserModelByMediator(application: Application) : AndroidViewModel(application) {
 

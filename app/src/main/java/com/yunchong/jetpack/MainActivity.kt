@@ -5,6 +5,13 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.yunchong.jetpack.databinding.ActivityMainBinding
+import com.yunchong.jetpack.databinding.LoginActivity
+import com.yunchong.jetpack.fastsp.FastSharedPreferencesActivity
+import com.yunchong.jetpack.lifecycle.LifecycleActivity
+import com.yunchong.jetpack.livedata.LiveDataActivity
+import com.yunchong.jetpack.liveeventbus.LiveEventBusActivity
+import com.yunchong.jetpack.navigation.NavigationActivity
+import com.yunchong.jetpack.permissionx.PermissionActivity
 
 class MainActivity : AppCompatActivity() {
 

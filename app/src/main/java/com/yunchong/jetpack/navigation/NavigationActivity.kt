@@ -1,8 +1,9 @@
-package com.yunchong.jetpack
+package com.yunchong.jetpack.navigation
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import com.yunchong.jetpack.R
 import com.yunchong.jetpack.databinding.ActivityNavigationBinding
 
 // Navigation 官方文档：
@@ -31,6 +32,8 @@ class NavigationActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView<ActivityNavigationBinding>(this@NavigationActivity, R.layout.activity_navigation)
+        binding = DataBindingUtil.setContentView<ActivityNavigationBinding>(this@NavigationActivity,
+            R.layout.activity_navigation
+        )
     }
 }

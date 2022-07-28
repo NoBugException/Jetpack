@@ -1,10 +1,11 @@
-package com.yunchong.jetpack
+package com.yunchong.jetpack.fastsp
 
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.yunchong.fastsharedpreferences.FastSharedPreferences
+import com.yunchong.jetpack.R
 import com.yunchong.jetpack.databinding.ActivityPreloaderBinding
 
 // Github地址：https://github.com/JeremyLiao/FastSharedPreferences
@@ -44,7 +45,9 @@ class FastSharedPreferencesActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView<ActivityPreloaderBinding>(this@FastSharedPreferencesActivity, R.layout.activity_preloader)
+        binding = DataBindingUtil.setContentView<ActivityPreloaderBinding>(this@FastSharedPreferencesActivity,
+            R.layout.activity_preloader
+        )
 
         binding.fastspWrite.setOnClickListener { // 写入
             val sharedPreferences: FastSharedPreferences = FastSharedPreferences.get("test")

@@ -1,8 +1,7 @@
-package com.yunchong.jetpack.model
+package com.yunchong.jetpack.livedata
 
 import androidx.annotation.MainThread
 import androidx.lifecycle.LiveData
-import com.yunchong.jetpack.bean.User
 
 class UserLiveData : LiveData<User>() {
     companion object {
@@ -12,7 +11,7 @@ class UserLiveData : LiveData<User>() {
         @JvmStatic
         @MainThread
         fun get(): UserLiveData {
-            mInstance = if (::mInstance.isInitialized) {
+            mInstance = if (Companion::mInstance.isInitialized) {
                 mInstance
             } else {
                 UserLiveData()

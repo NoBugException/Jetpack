@@ -28,19 +28,19 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".LoginActivity"/>
+        <activity android:name=".databinding.LoginActivity"/>
 
-        <activity android:name=".PermissionActivity"/>
+        <activity android:name=".permissionx.PermissionActivity"/>
 
-        <activity android:name=".LifecycleActivity"/>
+        <activity android:name=".lifecycle.LifecycleActivity"/>
 
-        <activity android:name=".LiveDataActivity"/>
+        <activity android:name=".livedata.LiveDataActivity"/>
 
-        <activity android:name=".LiveEventBusActivity"/>
+        <activity android:name=".liveeventbus.LiveEventBusActivity"/>
 
-        <activity android:name=".NavigationActivity"/>
+        <activity android:name=".navigation.NavigationActivity"/>
 
-        <activity android:name=".FastSharedPreferencesActivity"/>
+        <activity android:name=".fastsp.FastSharedPreferencesActivity"/>
 
     </application>
 

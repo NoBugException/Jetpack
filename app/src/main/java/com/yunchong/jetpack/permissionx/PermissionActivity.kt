@@ -1,4 +1,4 @@
-package com.yunchong.jetpack
+package com.yunchong.jetpack.permissionx
 
 import android.Manifest
 import android.os.Bundle
@@ -6,6 +6,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.permissionx.guolindev.PermissionX
+import com.yunchong.jetpack.R
 import com.yunchong.jetpack.databinding.ActivityPermissionxBinding
 
 class PermissionActivity : AppCompatActivity() {
@@ -14,7 +15,9 @@ class PermissionActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView<ActivityPermissionxBinding>(this@PermissionActivity, R.layout.activity_permissionx)
+        binding = DataBindingUtil.setContentView<ActivityPermissionxBinding>(this@PermissionActivity,
+            R.layout.activity_permissionx
+        )
 
         binding.activityDataButton.setOnClickListener {
             // 获取权限

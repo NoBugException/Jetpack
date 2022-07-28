@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/oneFragment"
-        android:name="com.yunchong.jetpack.fragments.OneFragment"
+        android:name="com.yunchong.jetpack.navigation.fragments.OneFragment"
         android:label="fragment_one"
         tools:layout="@layout/fragment_one" >
         <action
@@ -21,7 +21,7 @@
 
     <fragment
         android:id="@+id/twoFragment"
-        android:name="com.yunchong.jetpack.fragments.TwoFragment"
+        android:name="com.yunchong.jetpack.navigation.fragments.TwoFragment"
         android:label="fragment_two"
         tools:layout="@layout/fragment_two" >
         <action
@@ -36,7 +36,7 @@
 
     <fragment
         android:id="@+id/threeFragment"
-        android:name="com.yunchong.jetpack.fragments.ThreeFragment"
+        android:name="com.yunchong.jetpack.navigation.fragments.ThreeFragment"
         android:label="fragment_three"
         tools:layout="@layout/fragment_three" />
 </navigation>

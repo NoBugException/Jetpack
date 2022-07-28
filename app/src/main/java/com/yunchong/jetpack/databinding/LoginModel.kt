@@ -1,4 +1,4 @@
-package com.yunchong.jetpack.model
+package com.yunchong.jetpack.databinding
 
 import android.content.Context
 import android.graphics.Color

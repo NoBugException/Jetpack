@@ -1,9 +1,8 @@
-package com.yunchong.jetpack.model
+package com.yunchong.jetpack.livedata
 
 import android.app.Application
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.yunchong.jetpack.bean.User
 
 class UserModel(application: Application) : ViewModel() {
 

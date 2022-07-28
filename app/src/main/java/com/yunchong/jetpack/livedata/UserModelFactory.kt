@@ -1,4 +1,4 @@
-package com.yunchong.jetpack.model
+package com.yunchong.jetpack.livedata
 
 import android.app.Application
 import androidx.lifecycle.ViewModel

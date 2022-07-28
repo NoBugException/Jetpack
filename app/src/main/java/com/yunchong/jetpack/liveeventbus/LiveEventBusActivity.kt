@@ -1,10 +1,11 @@
-package com.yunchong.jetpack
+package com.yunchong.jetpack.liveeventbus
 
 import android.os.Bundle
 import android.os.Parcelable
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.jeremyliao.liveeventbus.LiveEventBus
+import com.yunchong.jetpack.R
 import com.yunchong.jetpack.databinding.ActivityLiveeventbusBinding
 import kotlinx.android.parcel.Parcelize
 
@@ -81,7 +82,9 @@ class LiveEventBusActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView<ActivityLiveeventbusBinding>(this@LiveEventBusActivity, R.layout.activity_liveeventbus)
+        binding = DataBindingUtil.setContentView<ActivityLiveeventbusBinding>(this@LiveEventBusActivity,
+            R.layout.activity_liveeventbus
+        )
         LiveEventBus.get("some_key", DemoEvent::class.java).observeSticky(this){
             binding.text.text = it.content
         }
