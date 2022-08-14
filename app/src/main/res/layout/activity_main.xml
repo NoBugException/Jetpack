@@ -97,7 +97,7 @@
             app:layout_constraintTop_toBottomOf="@id/liveeventbus_button"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            android:text="Navigation"/>
+            android:text="FastSP"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

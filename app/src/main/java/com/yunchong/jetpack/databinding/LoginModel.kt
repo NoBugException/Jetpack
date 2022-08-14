@@ -1,13 +1,11 @@
 package com.yunchong.jetpack.databinding
 
 import android.content.Context
-import android.graphics.Color
 import android.util.Log
 import android.view.Gravity
 import android.widget.Toast
 import androidx.databinding.ObservableField
 import com.yunchong.alltoast.AllToast
-import com.yunchong.jetpack.R
 
 
 /**
