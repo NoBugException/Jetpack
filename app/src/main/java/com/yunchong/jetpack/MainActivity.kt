@@ -10,6 +10,7 @@ import com.yunchong.jetpack.lifecycle.LifecycleActivity
 import com.yunchong.jetpack.livedata.LiveDataActivity
 import com.yunchong.jetpack.liveeventbus.LiveEventBusActivity
 import com.yunchong.jetpack.navigation.NavigationActivity
+import com.yunchong.jetpack.room.RoomActivity
 import com.yunchong.jetpack.permissionx.PermissionActivity
 
 class MainActivity : ScopedActivity() {
@@ -39,6 +40,9 @@ class MainActivity : ScopedActivity() {
         }
         binding.fastspButton.setOnClickListener {
             startActivity(Intent(this@MainActivity, FastSharedPreferencesActivity::class.java))
+        }
+        binding.pagingButton.setOnClickListener {
+            startActivity(Intent(this@MainActivity, RoomActivity::class.java))
         }
     }
 }

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp"
+        android:gravity="center">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/user_insert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="添加用户数据"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/delete_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="删除一个用户"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/book_insert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="插入书籍数据"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/hobby_insert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="插入喜好数据"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/search_by_bobby"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="根据喜好确定用户名和图书名"/>
+
+        <TextView
+            android:id="@+id/text_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="#000000"/>
+
+    </LinearLayout>
+</RelativeLayout>

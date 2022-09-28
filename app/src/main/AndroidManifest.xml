@@ -42,6 +42,8 @@
 
         <activity android:name=".fastsp.FastSharedPreferencesActivity"/>
 
+        <activity android:name=".room.RoomActivity"/>
+
     </application>
 
 </manifest>

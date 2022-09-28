@@ -10,94 +10,112 @@
             type="com.yunchong.jetpack.databinding.LoginModel" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity">
+        tools:context=".MainActivity"
+        android:orientation="vertical">
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/login_button"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:layout_marginTop="50dp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            android:textAllCaps="false"
-            app:layout_constraintRight_toLeftOf="@id/permissionx_button"
-            android:text="DataBinding"/>
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginVertical="20dp">
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/login_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textAllCaps="false"
+                android:text="DataBinding"/>
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/permissionx_button"
-            android:layout_width="wrap_content"
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/permissionx_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textAllCaps="false"
+                android:layout_marginLeft="20dp"
+                android:text="PermissonX"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:textAllCaps="false"
-            android:layout_marginTop="50dp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintLeft_toRightOf="@id/login_button"
-            app:layout_constraintRight_toRightOf="parent"
-            android:text="PermissonX"/>
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginVertical="20dp">
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/lifecycle_button"
-            android:layout_width="wrap_content"
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/lifecycle_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textAllCaps="false"
+                android:text="Lifecycle"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/liveData_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textAllCaps="false"
+                android:layout_marginLeft="20dp"
+                android:text="LiveData"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:textAllCaps="false"
-            android:layout_marginTop="50dp"
-            app:layout_constraintTop_toBottomOf="@id/login_button"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toLeftOf="@id/liveData_button"
-            android:text="Lifecycle"/>
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginVertical="20dp">
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/liveData_button"
-            android:layout_width="wrap_content"
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/liveeventbus_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textAllCaps="false"
+                android:text="LiveEventBus"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/navigation_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textAllCaps="false"
+                android:layout_marginLeft="20dp"
+                android:text="Navigation"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:textAllCaps="false"
-            android:layout_marginTop="50dp"
-            app:layout_constraintTop_toBottomOf="@id/login_button"
-            app:layout_constraintLeft_toRightOf="@id/lifecycle_button"
-            app:layout_constraintRight_toRightOf="parent"
-            android:text="LiveData"/>
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginVertical="20dp">
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/liveeventbus_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:textAllCaps="false"
-            android:layout_marginTop="50dp"
-            app:layout_constraintTop_toBottomOf="@id/lifecycle_button"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toLeftOf="@id/liveData_button"
-            android:text="LiveEventBus"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/fastsp_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textAllCaps="false"
+                android:text="FastSP"/>
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/navigation_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:textAllCaps="false"
-            android:layout_marginTop="50dp"
-            app:layout_constraintTop_toBottomOf="@id/lifecycle_button"
-            app:layout_constraintLeft_toRightOf="@id/liveeventbus_button"
-            app:layout_constraintRight_toRightOf="parent"
-            android:text="Navigation"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/paging_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_marginLeft="20dp"
+                android:textAllCaps="false"
+                android:text="Room"/>
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/fastsp_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:textAllCaps="false"
-            android:layout_marginTop="50dp"
-            app:layout_constraintTop_toBottomOf="@id/liveeventbus_button"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            android:text="FastSP"/>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </LinearLayout>
 </layout>
