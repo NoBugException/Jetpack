@@ -1,13 +1,21 @@
 package com.yunchong.jetpack
 
 import android.app.Application
+import android.content.Context
+import android.util.Log
 import com.jeremyliao.liveeventbus.LiveEventBus
 import com.yunchong.fastsharedpreferences.FastSharedPreferences
 
 class JetpackApplication : Application() {
 
+    override fun attachBaseContext(base: Context?) {
+        super.attachBaseContext(base)
+        Log.d("StartUpDemo", "===JetpackApplication attachBaseContext===")
+    }
+
     override fun onCreate() {
         super.onCreate()
+        Log.d("StartUpDemo", "===JetpackApplication onCreate===")
         instance = this
 
         // LiveEventBus 配置

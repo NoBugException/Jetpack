@@ -75,4 +75,6 @@ dependencies {
     // ===============Room kotlin===============
     implementation "androidx.room:room-ktx:2.4.3" // room依赖（kotlin）// ）
     kapt "androidx.room:room-compiler:2.4.3" // 注解处理器（kotlin）
+    // =============startup===============
+    implementation "androidx.startup:startup-runtime:1.0.0-alpha01"
 }
